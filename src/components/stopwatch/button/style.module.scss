@@ -1,0 +1,27 @@
+@import '../constants/styles.scss';
+
+.button{
+    padding: 11px;
+    height: 100px;
+    width: 100px;
+    border: 0px;
+    border-radius: 50px;
+    font-size: 20px;
+}
+.buttonContainer{
+    padding: 0px !important;
+    @extend .button;
+    & [id='start'] {
+        background: $startButtonBackground;
+        color: $buttonTextColorOnSpecificBg;
+    }
+    & [id='split']{
+        background: $splitButtonBackground;
+        color: $buttonTextColorOnSpecificBg;
+    }
+    & [id='reset']{
+        background: $resetButtonBackground;
+        color: $buttonTextColorOnSpecificBg;
+    }
+}
+

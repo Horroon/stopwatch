@@ -1,0 +1,40 @@
+.stopWatchBody{
+    background: #f5f8fb;
+    width: 800px;
+    margin: auto;
+    border-radius: 4px;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    & div{
+        padding: 10px;
+    }
+    & .timemainshow{
+        & h3{
+            font-size: 134px;
+            font-weight: 100;
+            margin: auto;
+            & span{
+                font-size: 40px;
+            }
+        }
+    }
+    & .splitTimeSmall{
+        & h5{
+            font-weight: 300;
+            font-size: 50px;
+            margin: auto;
+            text-align: start;
+            width: 84%;
+            color: #f09e26;
+            text-transform: uppercase;
+        }
+    }
+    & .buttonContainer{
+        & .buttonwrapper{
+            width: 87%;
+            margin: auto;
+            display: flex;
+        }
+    }
+}

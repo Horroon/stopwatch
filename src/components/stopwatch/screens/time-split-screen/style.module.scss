@@ -1,0 +1,21 @@
+.timesplitContainer{
+    display: block;
+    & .timesplitListContainer{
+        width: 95%;
+        border-top: 2px solid #ccc;
+        margin: auto;
+        & ul{
+            list-style: none;
+            padding: 0px;
+            & li{
+                display: flex;
+                justify-content: space-between;
+                & .splitTime{
+                    width: 50%;
+                    text-align: start;
+                }
+    
+            }
+        }
+    }
+}

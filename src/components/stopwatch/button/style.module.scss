@@ -7,12 +7,19 @@
     border: 0px;
     border-radius: 50px;
     font-size: 20px;
+    & :focus{
+        outline: none;
+    }
 }
 .buttonContainer{
     padding: 0px !important;
     @extend .button;
     & [id='start'] {
         background: $startButtonBackground;
+        color: $buttonTextColorOnSpecificBg;
+    }
+    & [id='pause'] {
+        background: $pauseButtonBackground;
         color: $buttonTextColorOnSpecificBg;
     }
     & [id='split']{
@@ -22,6 +29,12 @@
     & [id='reset']{
         background: $resetButtonBackground;
         color: $buttonTextColorOnSpecificBg;
+    }
+    & [class~='disabled'] {
+        background: $buttonDisbledBackground !important;
+        color: $buttonTextColorOnTransparentBg !important;
+        border: 2px solid $buttonBorderColorOnTransparentBg !important;
+        cursor:not-allowed;
     }
 }
 

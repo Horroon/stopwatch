@@ -1,15 +1,17 @@
 import React, { memo } from 'react';
 import styles from './style.module.scss';
 
-export const TimeSplitContainer = memo(()=> 
+export const TimeSplitContainer = memo(({timelogs})=> timelogs.isEnable && timelogs.logs.length &&
 <div className={styles.timesplitContainer}>
     <div className={styles.timesplitListContainer}>
         <ul>
-            <li>
-                <div className={styles.splitnumber}>#1</div>
-                <div className={styles.splitTime}>00:00:00.000</div>
-                <div className={styles.splitEvent}>Paused</div>
-            </li>
+            {
+                timelogs.logs.map((log,i)=><li id={`log-${i}`}>
+                    <div className={styles.splitnumber}>#{i+1}</div>
+                    <div className={styles.splitTime}>{log.time}</div>
+                    <div className={styles.splitEvent}>{log.event}</div>
+                </li>)
+            }
         </ul>
     </div>
-</div>)
+</div> || null)

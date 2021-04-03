@@ -1,18 +1,16 @@
 import React, { memo } from 'react';
 import {Button} from '../../button/button';
-export const ButtonsContainer = memo(({styles})=>{
-
-    const method = ()=>{alert("You click me ")}
+export const ButtonsContainer = memo(({styles, buttons, buttonHandler})=>{
     return <div className={styles.buttonContainer}>
                 <div className={styles.buttonwrapper}>
                     <div>
-                        <Button id="start" text="start" onClick={method} classNames="startbutton" />
+                        <Button {...buttons.first} onClick={()=>buttonHandler(buttons.first.id)} />
                     </div>
                     <div>
-                        <Button id="split" text="Split" onClick={method} classNames="splitbutton" />
+                        <Button {...buttons.second} onClick={()=>buttonHandler(buttons.second.id)} />
                     </div>
                     <div>
-                        <Button id="reset" text="Reset" onClick={method} classNames="resetbutton" />
+                        <Button {...buttons.third}  onClick={()=>buttonHandler(buttons.third.id)} />
                     </div>
                 </div>
          </div>

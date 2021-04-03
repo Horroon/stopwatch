@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import {Button} from '../../button/button';
-export const ButtonsContainer = memo(({styles, buttons, buttonHandler})=>{
-    return <div className={styles.buttonContainer}>
+
+export const ButtonsContainer = memo(({styles, buttons, buttonHandler})=>(<div className={styles.buttonContainer}>
                 <div className={styles.buttonwrapper}>
                     <div>
                         <Button {...buttons.first} onClick={()=>buttonHandler(buttons.first.id)} />
@@ -14,4 +14,4 @@ export const ButtonsContainer = memo(({styles, buttons, buttonHandler})=>{
                     </div>
                 </div>
          </div>
-})
+),)

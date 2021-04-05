@@ -39,6 +39,7 @@ export const MainScreen = memo(()=>{
             }, 10);
         }
         else if(status === 'reset'){
+           elapsedTime=0
            clearInterval(timerInterval)
            setState({type: Properties.displayTime, payload: InitialState.displayTime})
         }

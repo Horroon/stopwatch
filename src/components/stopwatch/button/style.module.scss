@@ -12,7 +12,7 @@
     }
 }
 .buttonContainer{
-    padding: 0px !important;
+    padding: 0px;
     @extend .button;
     & [id='start'] {
         background: $startButtonBackground;
@@ -31,9 +31,9 @@
         color: $buttonTextColorOnSpecificBg;
     }
     & [class~='disabled'] {
-        background: $buttonDisbledBackground !important;
-        color: $buttonTextColorOnTransparentBg !important;
-        border: 2px solid $buttonBorderColorOnTransparentBg !important;
+        background: $buttonDisbledBackground;
+        color: $buttonTextColorOnTransparentBg;
+        border: 2px solid $buttonBorderColorOnTransparentBg;
         cursor:not-allowed;
     }
 }
